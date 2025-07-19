@@ -53,7 +53,7 @@ section {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: url(/images/coding.jpg) no-repeat center center/cover;
+    background: url(images/coding.jpg) no-repeat center center/cover;
     background-size: cover;
     background-position: center;
     filter: blur(3px);
@@ -119,18 +119,53 @@ section {
 #contributions {
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
 }
 
 #contributions::before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: url(/images/cod.jpg) no-repeat center center/cover;
+    background: url(images/forest.jpg) no-repeat center center;
     background-size: cover;
-    background-position: center;
     filter: blur(3px);
-    z-index: 0;
-    object-fit: cover;
+    z-index: -1;
     transform: scale(1.05);
 }
 
+.contribution-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.contribution-area .glass-box {
+    max-width: 590px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.img-area img {
+    max-width: 390px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+}
+
+li {
+    color: white;
+    font-size: medium;
+    font-weight: normal;
+}
